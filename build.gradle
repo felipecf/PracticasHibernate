@@ -1,4 +1,7 @@
 apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'Pruebas.Prueba'
 
 ext {
    slf4j="1.7.5"
