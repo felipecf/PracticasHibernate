@@ -24,9 +24,12 @@ public class Prueba {
         
         List<Nombres> resulset;
         
-        Nombres persona = new Nombres("Ricardo","Salinas","Pliego");
-
+        Nombres persona = new Nombres(/*"Bolillo","Perez","Pinto"*/);
         
+        persona.setNombre("Anaid");
+        persona.setApPat("Tapia");
+        persona.setApMat("Sanchez");
+
         PersonasDAO insert = new PersonasDAO();
         
         insert.guardaPersona(persona);

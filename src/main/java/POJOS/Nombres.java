@@ -1,20 +1,30 @@
 package POJOS;
 
 import java.io.Serializable;
+import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
  *
  * @author Felipe
  */
 
+@Entity
+@Table(name="Nombres")
 public class Nombres implements Serializable{
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_Nombres")
     private Long id;
     private String nombre;
+    @Column(name = "Ap_pat")
     private String ApPat;
+    @Column(name = "Ap_mat")
     private String ApMat;
 
     public Nombres() {
