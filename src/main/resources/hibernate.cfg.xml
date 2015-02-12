@@ -1,22 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE hibernate-configuration SYSTEM 
-"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
-
+<!DOCTYPE hibernate-configuration PUBLIC 
+  "-//Hibernate/Hibernate Configuration DTD 3.0//EN" 
+  "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
-        
-        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-
-        <!-- Assume test is the database name -->
-        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/pruebas</property>
-        <property name="hibernate.connection.username">root</property>
-        <property name="hibernate.connection.password">1109</property>
+  
+        <!-- parametros para la conexion a la base de datos -->
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost/pruebas</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">1109</property>
+    
+        <!-- Configuracion del pool interno -->
+        <property name="connection.pool_size">1</property>
+    
+        <!-- Dialecto de la base de datos -->
+        <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+    
+        <!-- Otras propiedades importantes -->
         <property name="show_sql">true</property>
-        <property name="hibernate.hbm2ddl.auto">update</property>
-
-        <!-- List of XML mapping files -->
-        <mapping resource="\Mapeo\Nombres.hbm.xml"/>
+    
+        <!-- Aqui iran los archivos de mapeo -->
 
     </session-factory>
 </hibernate-configuration>
