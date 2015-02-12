@@ -8,6 +8,8 @@ public class Personas implements Serializable{
     private String nombre;
     private String ap_pat;
     private String ap_mat;
+    
+    private Direccion direccion;
 
     public Personas() {
     }
@@ -50,6 +52,13 @@ public class Personas implements Serializable{
     public void setAp_mat(String ap_mat) {
         this.ap_mat = ap_mat;
     }
-    
+        
+    public Direccion getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(Direccion direccion) {
+        this.direccion = direccion;
+    }
 
 }
